@@ -15,7 +15,6 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Casino")
 clock = pygame.time.Clock()
 
-
 def draw_text(surface, text, size, x, y):
 	font = pygame.font.SysFont("serif", size)
 	text_surface = font.render(text, True, WHITE)
@@ -122,29 +121,6 @@ class Box3(pygame.sprite.Sprite):
 			if num3 >= 13:
 				self.image = box_images[4] # squirtle
 
-class Box4(pygame.sprite.Sprite):
-	def __init__(self):
-		super().__init__()
-		self.image = box_images[0]# cherry
-		#self.image.set_colorkey(WHITE)
-		self.rect = self.image.get_rect()
-		self.rect.centerx = 100
-		self.rect.centery = 100
-
-	def update(self):
-		pass
-		
-class Box5(pygame.sprite.Sprite):
-	def __init__(self):
-		super().__init__()
-		self.image = box_images[5] # 7
-		#self.image.set_colorkey(WHITE)
-		self.rect = self.image.get_rect()
-		self.rect.centerx = 100
-		self.rect.centery = 200
-
-	def update(self):
-		pass
 		
 def show_go_screen():
 	
@@ -179,19 +155,14 @@ game_over = True
 running = True
 while running:
 	if game_over:
-
 		show_go_screen()
-
 		game_over = False
 		screen.blit(background, [0,0])
 		all_sprites = pygame.sprite.Group()
 		box1 = Box1()
 		box2 = Box2()
 		box3 = Box3()
-		box4 = Box4()#cherry
-		box5 = Box5()#7
-		all_sprites.add(box1, box2, box3, box4, box5)
-				
+		all_sprites.add(box1, box2, box3)	
 		scounter = True
 		counter = True
 		score = 50
@@ -201,6 +172,8 @@ while running:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			running = False
+			pygame.quit()
+			sys.exit()
 	
 	if score == 0:
 		game_over =True 
