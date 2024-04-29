@@ -56,15 +56,15 @@ class Box1(pygame.sprite.Sprite):
 			num1 = randint(1,15)
 			if num1 == 1:
 				self.image = box_images[5] # 7
-			if num1 == 2:
+			elif num1 == 2:
 				self.image = box_images[1] # pokeb
-			if num1 >= 3 and num1 <= 5:
+			elif num1 >= 3 and num1 <= 5:
 				self.image = box_images[0] # cherry
-			if num1 >= 6 and num1 <= 9:
+			elif num1 >= 6 and num1 <= 9:
 				self.image = box_images[2] # pika
-			if num1 >= 10 and num1 <= 12:
+			elif num1 >= 10 and num1 <= 12:
 				self.image = box_images[3] # star
-			if num1 >= 13:
+			else:
 				self.image = box_images[4] # squirtle
 			
 class Box2(pygame.sprite.Sprite):
@@ -83,15 +83,15 @@ class Box2(pygame.sprite.Sprite):
 			num2 = randint(1,15)
 			if num2 == 1:
 				self.image = box_images[5] # 7
-			if num2 == 2:
+			elif num2 == 2:
 				self.image = box_images[1] # pokeb
-			if num2 >= 3 and num2 <= 5:
+			elif num2 >= 3 and num2 <= 5:
 				self.image = box_images[0] # cherry
-			if num2 >= 6 and num2 <= 9:
+			elif num2 >= 6 and num2 <= 9:
 				self.image = box_images[2] # pika
-			if num2 >= 10 and num2 <= 12:
+			elif num2 >= 10 and num2 <= 12:
 				self.image = box_images[3] # star
-			if num2 >= 13:
+			else:
 				self.image = box_images[4] # squirtle
 
 class Box3(pygame.sprite.Sprite):
@@ -110,15 +110,15 @@ class Box3(pygame.sprite.Sprite):
 			num3 = randint(1,15)
 			if num3 == 1:
 				self.image = box_images[5] # 7
-			if num3 == 2:
+			elif num3 == 2:
 				self.image = box_images[1] # pokeb
-			if num3 >= 3 and num3 <= 5:
+			elif num3 >= 3 and num3 <= 5:
 				self.image = box_images[0] # cherry
-			if num3 >= 6 and num3 <= 9:
+			elif num3 >= 6 and num3 <= 9:
 				self.image = box_images[2] # pika
-			if num3 >= 10 and num3 <= 12:
+			elif num3 >= 10 and num3 <= 12:
 				self.image = box_images[3] # star
-			if num3 >= 13:
+			else:
 				self.image = box_images[4] # squirtle
 
 		
